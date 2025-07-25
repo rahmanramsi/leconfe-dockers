@@ -20,7 +20,7 @@ RUN install-php-extensions intl bcmath gd exif ftp
 ############################################
 FROM base as release
 
-ENV LECONFE_VERSION=1.2.8 \
+ENV LECONFE_VERSION=1.3.0-beta.3 \
     APP_DIR=/var/www/html
 
 	
