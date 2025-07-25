@@ -30,10 +30,8 @@ ADD https://github.com/leconfe/leconfe/releases/download/${LECONFE_VERSION}/leco
 # Create the public directory
 RUN mkdir -p $APP_DIR/public
 
-# COPY --chown=www-data:www-data index.php /var/www/html/public
-
-# RUN mv $APP_DIR/ojs-${OJS_VERSION} $APP_DIR/public
 RUN tar -xzf /tmp/leconfe-${LECONFE_VERSION}.tar.gz -C /var/www/html 
+RUN rm /tmp/leconfe-${LECONFE_VERSION}.tar.gz
 
 RUN chown -R www-data:www-data $APP_DIR
 
